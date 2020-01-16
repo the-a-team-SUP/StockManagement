@@ -31,6 +31,12 @@ class User {
         ]);
         return addedUser.rows[0];
     }
+
+    static async updatePassword(id, password){
+        const updatedUser = await pool.query(queries.updatePassword, [password, id]);
+        return updatedUser.rows[0];
+    }
+
 }
 
 export default User;

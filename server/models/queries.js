@@ -24,11 +24,14 @@ const findOneUser = `select * from users where email= $1`;
 
 const findUserById = `select * from users where id= $1`;
 
+const updatePassword = `UPDATE users SET password=$1 WHERE id=$2 RETURNING *`
+
 
 export default {
     createUsersTable,
     deleteAllTables,
     addUser,
     findOneUser,
-    findUserById
+    findUserById,
+    updatePassword
 };

@@ -9,5 +9,6 @@ import isAdmin from '../middlewares/isAdmin';
 const router = Router();
 
 router.post('/employee', isLogged, isAdmin, AuthValidator.addEmployeeValidator, asyncErrorHandler(EmployeeController.addEmployee));
+router.patch('/employee/:employee_id/password', isLogged, AuthValidator.EmployeePasswordValidator, asyncErrorHandler(EmployeeController.updatePassword));
 
 export default router;
