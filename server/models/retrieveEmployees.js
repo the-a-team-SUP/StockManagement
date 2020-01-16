@@ -1,11 +1,9 @@
 import pool from '../config/dbConnect';
+
 import queries from '../models/queries';
  
      const adminRetrieve = async(req, res)=> {
-    const findAllEmployees = 'SELECT * FROM  users';
-    
     try {
-        
         const {rows}  = await pool.query(queries.findAllEmployees);
         return res.status(200).json( {rows} );
         
@@ -14,6 +12,4 @@ import queries from '../models/queries';
       }
     }
     
-
-
     export default adminRetrieve;

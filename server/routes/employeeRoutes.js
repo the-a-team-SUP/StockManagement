@@ -11,4 +11,6 @@ const router = Router();
 
 router.post('/employee', isLogged, isAdmin, AuthValidator.addEmployeeValidator, asyncErrorHandler(EmployeeController.addEmployee));
 router.get('/retrieve/employees', isLogged, isAdmin,  asyncErrorHandler(retrieve));
+
+
 export default router;
