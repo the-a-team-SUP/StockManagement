@@ -35,6 +35,21 @@ class EmployeeController {
             }
         });
     }
+
+    static async updatePassword(req, res){
+        const newPassword = req.body.password;
+        if(req.userData.id == req.params.employee_id){
+            const newPassword = new User(req.body);
+            const {names, username} = await User.updatePassword(req.userData.id, newPassword.password);
+            res.send(`password successfuly updated for user ${names} with username ${username}`);
+        } else {
+            res.status(401).json({
+                status: 401,
+                error: "Unauthorized. \nUnable to update password"
+            });
+        }
+    }
+
 };
 
 export default EmployeeController;

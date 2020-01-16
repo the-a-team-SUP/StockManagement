@@ -31,6 +31,22 @@ class AuthValidation {
         });
     }
 
+    static EmployeePasswordValidator(req, res, next){
+        const schema = Joi.object().keys({
+            password: Joi.string().min(6).label('password').required()
+        });
+        const valid = schema.validate(req.body, {
+            abortEarly: false
+        })
+        if(valid.error != null){
+            return res.status(400).json({
+                status: 400,
+                error: `${valid.error.details[0].message}`
+            });
+        }
+        next();
+    }
+
     static addEmployeeValidator(req, res, next) {
         const Schema = Joi.object().keys({
             createdOn: Joi.date().required(),
