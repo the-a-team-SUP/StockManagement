@@ -22,7 +22,7 @@ class EmployeeController {
 
         return res.status(201).json({
             status: 201,
-            message: 'The employee was added successfully',
+            message: 'Employee created successfully',
             data: {
                 token: Auth.generateToken(
                     email,
@@ -36,18 +36,33 @@ class EmployeeController {
         });
     }
 
-    static async updatePassword(req, res){
-        const newPassword = req.body.password;
-        if(req.userData.id == req.params.employee_id){
-            const newPassword = new User(req.body);
-            const {names, username} = await User.updatePassword(req.userData.id, newPassword.password);
-            res.send(`password successfuly updated for user ${names} with username ${username}`);
+    static async updatePassword(req, res) {
+        const newPassword = Auth.hashPassword(req.body.password);
+        if (req.userData.id === parseInt(req.params.employee_id, 10)) {
+            const { names, email, role } = await User.updatePassword(req.userData.id, newPassword);
+            res.status(200).json({
+                status: 200,
+                message: 'Employee password updated successfully',
+                data: {
+                    names,
+                    email,
+                    role
+                }
+            });
         } else {
             res.status(401).json({
                 status: 401,
                 error: "Unauthorized. \nUnable to update password"
             });
         }
+    }
+
+    static async retrieveEmployees(req, res) {
+        const employees = await User.allEmployees();
+        return res.status(200).json({
+            status: 200,
+            data: employees
+        });
     }
 
 };

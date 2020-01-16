@@ -6,6 +6,6 @@ import asyncErrorHandler from '../helpers/asyncErrorHandler';
 
 const router = Router();
 
-router.post('/signin', AuthValidator.signinValidator, asyncErrorHandler(UserController.signIn));
+router.post('/auth/login', AuthValidator.signinValidator, asyncErrorHandler(UserController.signIn));
 
 export default router;
