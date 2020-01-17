@@ -24,11 +24,9 @@ const findOneUser = `select * from users where email= $1`;
 
 const findUserById = `select * from users where id= $1`;
 
-<<<<<<< HEAD
 const findAllEmployees = 'SELECT * FROM  users';
 
 const updatePassword = `UPDATE users SET password=$1 WHERE id=$2 RETURNING *`;
-=======
 const createProductTable = `CREATE TABLE IF NOT EXISTS
             products (
                 id SERIAL PRIMARY KEY,
@@ -50,7 +48,6 @@ const addProduct = `
 const findProductById = `select * from products where id= $1`;
 
 const allProducts = `select * from products`;
->>>>>>> ft(backend): Add product endpoint Finishes[#170745930]
 
 export default {
     createUsersTable,
@@ -58,13 +55,10 @@ export default {
     addUser,
     findOneUser,
     findUserById,
-<<<<<<< HEAD
     findAllEmployees,
-    updatePassword
-=======
+    updatePassword,
     createProductTable,
     addProduct,
     findProductById,
     allProducts
->>>>>>> ft(backend): Add product endpoint Finishes[#170745930]
 };
