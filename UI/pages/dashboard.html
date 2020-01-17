@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Management</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="../css/fontawesome/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/main.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="menu c-blue s-hide">
+            <div class="logo">
+                <a href="./dashboard.html"><i class="fa fa-home s-hide"></i></a>
+                <a href="#" class="close"><i class="fa fa-times l-hide"></i></a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="./dashboard.html" class="nav-link"><i class="fa fa-tachometer-alt"></i>
+                            <span class="l-hide"> Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./employees.html" class="nav-link"><i class="fa fa-users"></i> <span class="l-hide">
+                                Employees</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./category.html" class="nav-link"><i class="fa fa-clipboard-list"></i> <span
+                                class="l-hide"> Categories</span></a></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./product.html" class="nav-link"><i class="fa fa-box-open"></i> <span class="l-hide">
+                                Products</span></a></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./moveOut.html" class="nav-link"><i class="fa fa-people-carry"></i> <span
+                                class="l-hide"> Move Out product</span></a></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./history.html" class="nav-link"><i class="fa fa-history"></i> <span class="l-hide">
+                                History</span></a></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="./index.html"><i class="fa fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="main">
+            <header class="main-header flex row">
+                <div class="search child">
+                    <i class="fa fa-bars l-hide h-menu"></i>
+                    <input type="text" placeholder="Search..." />
+                </div>
+                <div class="settigns child">
+                    <div class="flex row">
+                        <a href="./editPassword.html"><i class="fa fa-user-cog"></i></a>
+                        <div class="avatar">
+                            <img src="../images/male_avatar.png" alt="" />
+                        </div>
+                        <h2>Mugisha</h2>
+                    </div>
+                </div>
+            </header>
+
+            <div class="table-container flex row">
+                <div class="tables child">
+                    <div class="welcome flex row m-bottom p-20">
+                        <div class="message">
+                            <h2 class="title m-bottom">Welcome Mugisha</h2>
+                            <p class="sub-title">stock management system facilitate on
+                                a long term company’s products to be easily manageable and easy to track the flows
+                                and it can be used to sell anything. This will help the company have an idea of
+                                everything that enters and goes out of the company.</p>
+                        </div>
+                        <div class="graphic s-hide">
+                            <img src="../images/welcoming2.png" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="card p-20 b-radius m-bottom overflow">
+                        <h2 class="table-title">Latest employees</h2>
+                        <table id="main-table">
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>email</th>
+                                <th>Created at</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Names brobro</td>
+                                <td>Employee</td>
+                                <td>email@email.com</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Names brobro</td>
+                                <td>Employee</td>
+                                <td>email@email.com</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Names brobro</td>
+                                <td>Employee</td>
+                                <td>email@email.com</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Names brobro</td>
+                                <td>Employee</td>
+                                <td>email@email.com</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Names brobro</td>
+                                <td>Employee</td>
+                                <td>email@email.com</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="card p-20 b-radius m-bottom">
+                        <h2 class="table-title">Latest products</h2>
+                        <table id="main-table">
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>created at</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Product Names</td>
+                                <td>watch</td>
+                                <td>40</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Product Names</td>
+                                <td>watch</td>
+                                <td>40</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Product Names</td>
+                                <td>watch</td>
+                                <td>40</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Product Names</td>
+                                <td>watch</td>
+                                <td>40</td>
+                                <td>08 june, 2019</td>
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="summary flex column m-left p-20 b-radius">
+                    <h1 class="title m-bottom">Summary</h1>
+                    <div class="card flex column m-bottom p-20 b-radius c-blue-soft summary-card">
+                        <div class="flex row">
+                            <i class="fa fa-box-open"></i>
+                            <h2 class="m-left">All Products</h2>
+                        </div>
+                        <h1>3456</h1>
+                    </div>
+                    <div class="card flex column m-bottom p-20 b-radius c-warning-soft summary-card">
+                        <div class="flex row">
+                            <i class="fa fa-clipboard-list"></i>
+                            <h2 class="m-left">All Category</h2>
+                        </div>
+                        <h1>3456</h1>
+                    </div>
+                    <div class="card flex column m-bottom p-20 b-radius c-success-soft summary-card">
+                        <div class="flex row">
+                            <i class="fa fa-users"></i>
+                            <h2 class="m-left">All Employees</h2>
+                        </div>
+                        <h1>3456</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
