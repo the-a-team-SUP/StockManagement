@@ -12,7 +12,8 @@
         "lint": "eslint server",
         "createtables": "node --require @babel/polyfill --require @babel/register server/models/addTables",
         "droptables": "node --require @babel/polyfill --require @babel/register server/models/deleteTables",
-        "add-users": "node --require @babel/polyfill --require @babel/register server/models/addUsers"
+        "add-users": "node --require @babel/polyfill --require @babel/register server/models/addUsers",
+        "add-category": "node --require @babel/polyfill --require @babel/register server/models/addCategory"
     },
     "nyc": {
         "exclude": "server/tests/*.spec.js"
@@ -49,6 +50,7 @@
         "@babel/register": "^7.8.3",
         "@hapi/joi": "^16.1.8",
         "bcrypt": "^3.0.6",
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "cross-env": "^6.0.3",
         "dotenv": "^8.1.0",
