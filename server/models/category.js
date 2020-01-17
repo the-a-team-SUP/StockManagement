@@ -7,7 +7,11 @@ const insertCategory = `INSERT INTO categories (
    name,
    createdAt
   ) VALUES ($1,$2) ON CONFLICT DO NOTHING returning *`;
+
+const getAllCategories = `SELECT * FROM categories`
+
 export default {
     createCategory,
-    insertCategory
+    insertCategory,
+    getAllCategories
 };
