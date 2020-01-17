@@ -22,6 +22,15 @@ class product {
     ]);
     return addedProduct.rows[0];
   }
+  static async allProducts() {
+    const { rows } = await pool.query(queries.findAllProducts);
+    return rows;
+}
+static async oneProduct(id){
+  const { rows } = await pool.query(queries.findProductById,[id]);
+  return rows[0];
+  
+}
 }
 
 export default product;
