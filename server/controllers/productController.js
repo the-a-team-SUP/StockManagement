@@ -1,4 +1,5 @@
 import Product from "../models/productModel";
+import product from "../models/productModel";
 
 class ProductControler {
   static async createProduct(req, res) {
@@ -19,6 +20,22 @@ class ProductControler {
       status: 500,
       message: "failed to save product"
     });
+  };
+
+  static async retrieveProducts(req,res){
+     const products = await product.allProducts();
+     return res.status(200).json({
+      status: 200,
+      data: products
+  });
+  };
+
+  static async retrieveOneProduct(req,res){
+    const getOne = await product.oneProduct(req.params.id);
+    return res.status(200).json({
+      status: 200,
+      data: getOne
+  });
   }
 }
 
