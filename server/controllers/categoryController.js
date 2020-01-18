@@ -25,5 +25,19 @@ class categoryController {
 
         });
     }
+    static async viewAll(req, res){
+        const allCategories = await con.query(categories.getAllCategories);
+        console.log(allCategories.rows.length);
+        if(allCategories.rows.length > 0){
+            return res.status(200).json({
+                status:200,
+                data: allCategories.rows
+            });
+        }
+        return res.status(404).json({
+            status:404,
+            error: "no categories were found"
+        });
+    }
 }
 export default categoryController;

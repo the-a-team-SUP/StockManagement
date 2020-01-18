@@ -47,6 +47,8 @@ const addProduct = `
 
 const findProductById = `select * from products where id= $1`;
 
+const findAllProducts = `select * from products`;
+
 const allProducts = `select * from products`;
 
 export default {
@@ -60,5 +62,6 @@ export default {
     createProductTable,
     addProduct,
     findProductById,
+    findAllProducts,
     allProducts
 };
