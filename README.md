@@ -70,7 +70,7 @@ Make sure that you have cloned this Repo to your local machine
 
 
 ## GitHub Pages
-- link [StockManagement web](https://the-a-team-sup.github.io/StockManagement/)
+- link [StockManagement UI](https://the-a-team-sup.github.io/StockManagement/UI/pages/)
 
 ## Tools Used
 
