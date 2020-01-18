@@ -25,7 +25,6 @@ class categoryController {
 
         });
     }
-
     static async viewAll(req, res){
         const allCategories = await con.query(categories.getAllCategories);
         console.log(allCategories.rows.length);
@@ -40,6 +39,5 @@ class categoryController {
             error: "no categories were found"
         });
     }
-
 }
 export default categoryController;

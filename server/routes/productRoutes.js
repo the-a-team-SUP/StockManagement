@@ -10,4 +10,5 @@ const router = Router();
 router.post("/products", isLogged, ProductController.createProduct);
 router.get("/products", isLogged,asyncErrorHandler(ProductController.retrieveProducts));
 router.get("/products/:id",isLogged,asyncErrorHandler(ProductController.retrieveOneProduct ));
+
 export default router;
